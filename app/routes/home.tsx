@@ -2,6 +2,8 @@ import type { Route } from "./+types/home";
 import { Welcome } from "../welcome/welcome";
 import TopNav from "~/components/TopNav";
 import Footer from "~/components/Footer";
+import CorePromo from "~/components/CorePromo";
+import BottomNav from "~/components/BottomNav";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -15,7 +17,8 @@ export default function Home() {
     <div className="flex flex-col h-screen justify-between">
         <TopNav />
         <Welcome />
-        <Footer />
+        <CorePromo />
+        <BottomNav />
     </div>
   );
 }
