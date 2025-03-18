@@ -46,16 +46,16 @@ export default function BottomNav() {
 
             {/* <!-- Social Media Container --> */}
             <div className="flex space-x-6">
-                <a href="https://www.facebook.com/jaydot2llc/">
+                <a href="https://www.facebook.com/jaydot2llc/" target="_blank" rel="noopener noreferrer">
                     <img src={facebookImg} alt="Facebook" className="ficon" />
                 </a>
-                <a href="https://x.com/jaydot2llc">
+                <a href="https://x.com/jaydot2llc" target="_blank" rel="noopener noreferrer">
                     <img src={twitterImg} alt="Twitter" className="ficon" />
                 </a>
-                <a href="https://www.pinterest.com/jaydotllc/">
+                <a href="https://www.pinterest.com/jaydotllc/" target="_blank" rel="noopener noreferrer">
                     <img src={pinterestImg} alt="Pinterest" className="ficon" />
                 </a>
-                <a href="https://www.instagram.com/jaydot2llc/">
+                <a href="https://www.instagram.com/jaydot2llc/" target="_blank" rel="noopener noreferrer">
                     <img src={instagramImg} alt="Instagram" className="ficon" />
                 </a>
             </div>

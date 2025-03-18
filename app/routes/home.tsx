@@ -14,11 +14,9 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen justify-between">
-        <TopNav />
+    <div>      
         <Welcome />
         <CorePromo />
-        <BottomNav />
     </div>
   );
 }
