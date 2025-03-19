@@ -5,4 +5,6 @@ export default [
     route("about", "components/About.tsx"),
     route("products", "components/Products.tsx"),
     route("services", "components/Services.tsx"),
+    route("login", "components/Login.tsx"),
+    route("register", "components/Register.tsx"),
 ] satisfies RouteConfig;

@@ -49,12 +49,10 @@ export default function TopNav() {
 
                     {/* <!-- Flex Container for the Right Buttons Menu --> */}
                     <div className="hidden items-center space-x-6 font-bold text-grayishViolet lg:flex">
-                        <div className="hover:text-cyan-800">
-                            <a href="#">Login</a>
-                        </div>
-                        <a href="" className="px-8 py-3 font-bold text-white bg-cyan-700 rounded-full hover:opacity-70">
+                        <NavLink className="hover:text-cyan-800" to="/login">Login</NavLink>
+                        <NavLink to="/register" className="px-8 py-3 font-bold text-white bg-cyan-700 rounded-full hover:opacity-70">
                             Register
-                        </a>
+                        </NavLink>
                     </div>
                     {/* <!-- Hamburger Menu --> */}
                     <button id="menu-btn" type="button" className="z-40 block hamburger lg:hidden focus:outline-none" onClick={toggleHamburgerMenu}>
@@ -66,11 +64,11 @@ export default function TopNav() {
                 {/* <!-- Mobile Menu --> */}
                 <div id="menu" className="absolute hidden p-6 rounded-lg bg-indigo-900 left-6 right-6 top-20 z-100">
                     <div className="flex flex-col items-center justify-center space-y-6 w-full font-bold text-white rounded-sm">
-                        <NavLink to="/about" className="w-full text-center">About</NavLink>
-                        <NavLink to="/products" className="w-full text-center">Products</NavLink>
-                        <NavLink to="/services" className="w-full text-center">Services</NavLink>
-                        <NavLink to="/login" className="w-full pt-6 border-t border-gray-400 text-center">Login</NavLink>
-                        <NavLink to="/register" className="w-full text-center py-3 rounded-full bg-blue-900">Register</NavLink>
+                        <NavLink to="/about" onClick={toggleHamburgerMenu} className="w-full text-center">About</NavLink>
+                        <NavLink to="/products" onClick={toggleHamburgerMenu} className="w-full text-center">Products</NavLink>
+                        <NavLink to="/services" onClick={toggleHamburgerMenu} className="w-full text-center">Services</NavLink>
+                        <NavLink to="/login" onClick={toggleHamburgerMenu} className="w-full pt-6 border-t border-gray-400 text-center">Login</NavLink>
+                        <NavLink to="/register" onClick={toggleHamburgerMenu} className="w-full text-center py-3 rounded-full bg-blue-900">Register</NavLink>
                     </div>
                 </div>
             </nav>
