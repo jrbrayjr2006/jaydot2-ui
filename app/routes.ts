@@ -11,6 +11,6 @@ export default [
     route("contact", "components/Contact.tsx"),
     route("support", "components/Support.tsx"),
     route("privacy-policy", "components/PrivacyPolicy.tsx"),
-    route("faqs", "components/FAQs.tsx"),
+    route("faqs", "components/Faqs.tsx"),
     route("404", "components/NotFound.tsx"),
 ] satisfies RouteConfig;
