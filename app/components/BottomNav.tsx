@@ -4,6 +4,7 @@ import pinterestImg from '../images/icon-pinterest.svg';
 import instagramImg from '../images/icon-instagram.svg';
 // import githubImg from '../images/icon-github.svg';
 import logoImg from '../images/jaydot2logo.jpg';
+import { NavLink } from 'react-router';
 
 export default function BottomNav() {
     return (
@@ -19,27 +20,27 @@ export default function BottomNav() {
                 <div className="flex flex-col items-center w-full md:items-start">
                     <div className="mb-5 font-bold text-white capitalize">Features</div>
                     <div className="flex flex-col items-center space-y-3 md:items-start">
-                        <a href="#" className="capitalize text-gray-400 hover:text-cyan">Products</a>
-                        <a href="#" className="capitalize text-gray-400 hover:text-cyan">Services</a>
-                        <a href="#" className="capitalize text-gray-400 hover:text-cyan">Analytics</a>
+                        <NavLink to="/products" className="capitalize text-gray-400 hover:text-cyan">Products</NavLink>
+                        <NavLink to="/services" className="capitalize text-gray-400 hover:text-cyan">Services</NavLink>
+                        <NavLink to="/research" className="capitalize text-gray-400 hover:text-cyan">Research</NavLink>
                     </div>
                 </div>
                 {/* <!-- Menu 2 --> */}
                 <div className="flex flex-col items-center w-full md:items-start">
                     <div className="mb-5 font-bold text-white capitalize">Resources</div>
                     <div className="flex flex-col items-center space-y-3 md:items-start">
-                        <a href="#" className="capitalize text-gray-400 hover:text-cyan">Blog</a>
-                        <a href="#" className="capitalize text-gray-400 hover:text-cyan">Support</a>
+                        <a href="https://jaydot2.wordpress.com/" className="capitalize text-gray-400 hover:text-cyan" target="_blank">Blog</a>
+                        <NavLink to="/support" className="capitalize text-gray-400 hover:text-cyan">Support</NavLink>
                     </div>
                 </div>
                 {/* <!-- Menu 3 --> */}
                 <div className="flex flex-col items-center w-full md:items-start">
                     <div className="mb-5 font-bold text-white capitalize">Company</div>
                     <div className="flex flex-col items-center space-y-3 md:items-start">
-                        <a href="#" className="capitalize text-gray-400 hover:text-cyan">About</a>
-                        <a href="#" className="capitalize text-gray-400 hover:text-cyan">FAQs</a>
-                        <a href="#" className="capitalize text-gray-400 hover:text-cyan">Privacy Policy</a>
-                        <a href="#" className="capitalize text-gray-400 hover:text-cyan">Contact</a>
+                        <NavLink to="/about" className="capitalize text-gray-400 hover:text-cyan">About</NavLink>
+                        <NavLink to="/faqs" className="capitalize text-gray-400 hover:text-cyan">FAQs</NavLink>
+                        <NavLink to="/privacy-policy" className="capitalize text-gray-400 hover:text-cyan">Privacy Policy</NavLink>
+                        <NavLink to="/contact" className="capitalize text-gray-400 hover:text-cyan">Contact</NavLink>
                     </div>
                 </div>
             </div>
