@@ -37,6 +37,14 @@ h3 {
   @apply text-4xl font-bold text-cyan-700 mt-4;
 }
 
+ul {
+  @apply mt-4 md:list-disc md:list-inside;
+}
+
+ul li {
+  @apply mt-2 md:mt-0;
+}
+
 .section-container {
   @apply max-w-6xl mx-auto px-10 text-center;
 }
