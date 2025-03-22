@@ -1,4 +1,6 @@
 import {useRef, useState} from "react";
+import { NavLink } from 'react-router';
+import logoImg from '../images/jaydot2logo.jpg';
 
 export default function Login() {
     const [username, setUsername] = useState('');
@@ -14,26 +16,77 @@ export default function Login() {
         }
     }
     return (
-        <section id="login" className="container flex flex-col mx-auto p-6 lg:flex-row">
-            {/* <h2 className="text-6xl font-bold text-center lg:text-left lg:w-1/2">Login</h2> */}
-            <div className="flex flex-col row-start-2 px-auto items-center justify-center container mx-auto">
-                <h1 className="text-3xl font-bold">User Login</h1>
-                {isLoggedIn ? <p>Welcome {username}</p> : <p></p>}
-                <form className="flex flex-col bg-slate-300 rounded-md p-8 md:flex-row md:space-x-8">
-                    <p className="mt-3">
-                        <label className={`${usernameIsInvalid ? 'invalid' : ''}`}>
-                            <span className="text-black font-bold mr-4 w-1/2">Username:</span>
-                            <input ref={usernameInput} className={`bg-white placeholder:text-gray-400  w-1/2 ${usernameIsInvalid ? 'invalid' : undefined}`} type="text" name="username" placeholder="enter username" />
+        <section id="login" className="container flex flex-col mx-auto h-full p-6">
+            <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+                <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                {/* <img
+                    alt="Jaydot2 LLC"
+                    src={logoImg}
+                    className="mx-auto h-10 w-auto"
+                /> */}
+                <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">
+                    Sign in to your account
+                </h2>
+                </div>
+
+                <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                <form action="#" method="POST" className="space-y-6">
+                    <div>
+                    <label htmlFor="email" className="block text-sm/6 font-medium text-gray-900">
+                        Email address
+                    </label>
+                    <div className="mt-2">
+                        <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                        autoComplete="email"
+                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-cyan-600 sm:text-sm/6"
+                        />
+                    </div>
+                    </div>
+
+                    <div>
+                    <div className="flex items-center justify-between">
+                        <label htmlFor="password" className="block text-sm/6 font-medium text-gray-900">
+                        Password
                         </label>
-                    </p>
-                    <p className="mt-3">
-                        <label>
-                        <span className="text-black font-bold mr-4 w-1/2">Password:</span>
-                        <input className="bg-white placeholder:text-gray-400 w-1/2" type="password" name="password" placeholder="enter password" />
-                        </label>
-                    </p>
-                    <button className="mt-8 px-8 py-3 font-bold text-white bg-cyan-700 rounded-full hover:opacity-70" type="submit" onClick={handleSubmit}>Login</button>
+                        <div className="text-sm">
+                        <a href="#" className="font-semibold text-gray-900 hover:text-cyan-800">
+                            Forgot password?
+                        </a>
+                        </div>
+                    </div>
+                    <div className="mt-2">
+                        <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        required
+                        autoComplete="current-password"
+                        className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-cyan-600 sm:text-sm/6"
+                        />
+                    </div>
+                    </div>
+
+                    <div>
+                    <button
+                        type="submit"
+                        className="flex w-full justify-center rounded-full bg-cyan-700 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600"
+                    >
+                        Sign in
+                    </button>
+                    </div>
                 </form>
+
+                <p className="mt-10 text-center text-sm/6 text-gray-500">
+                    Not a member?{' '}
+                    <NavLink to="/register" className="font-semibold text-gray-900 hover:text-cyan-800">
+                    Go to registration
+                    </NavLink>
+                </p>
+                </div>
             </div>
         </section>
 

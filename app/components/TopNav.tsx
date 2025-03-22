@@ -62,7 +62,7 @@ export default function TopNav() {
                     </button>
                 </div>
                 {/* <!-- Mobile Menu --> */}
-                <div id="menu" className="absolute hidden p-6 rounded-lg bg-indigo-900 left-6 right-6 top-20 z-100">
+                <div id="menu" className="absolute hidden p-6 rounded-lg bg-cyan-700 left-6 right-6 top-20 z-100">
                     <div className="flex flex-col items-center justify-center space-y-6 w-full font-bold text-white rounded-sm">
                         <NavLink to="/about" onClick={toggleHamburgerMenu} className="w-full text-center">About</NavLink>
                         <NavLink to="/products" onClick={toggleHamburgerMenu} className="w-full text-center">Products</NavLink>
