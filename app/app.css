@@ -18,8 +18,11 @@
   h3 {
       @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
   }
+  h4 {
+      @apply mb-5 mt-2 text-3xl font-bold text-darkGrayishBlue;
+  }
   h5 {
-      @apply mb-5 text-2xl font-bold text-darkGrayishBlue;
+      @apply mb-5 mt-1 text-2xl font-bold text-darkGrayishBlue;
   }
 }
 
@@ -46,7 +49,7 @@ ul li {
 }
 
 .section-container {
-  @apply max-w-6xl mx-auto px-10 text-center;
+  @apply max-w-6xl mx-auto px-10 text-center lg:text-left;
 }
 
 .ficon:hover {
