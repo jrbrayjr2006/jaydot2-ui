@@ -38,7 +38,7 @@ export default function BottomNav() {
                     <div className="mb-5 font-bold text-white capitalize">Company</div>
                     <div className="flex flex-col items-center space-y-3 md:items-start">
                         <NavLink to="/about" className="capitalize text-gray-400 hover:text-cyan">About</NavLink>
-                        <NavLink to="/faqs" className="capitalize text-gray-400 hover:text-cyan">FAQs</NavLink>
+                        {/* <NavLink to="/faqs" className="capitalize text-gray-400 hover:text-cyan">FAQs</NavLink> */}
                         <NavLink to="/privacy-policy" className="capitalize text-gray-400 hover:text-cyan">Privacy Policy</NavLink>
                         <NavLink to="/contact" className="capitalize text-gray-400 hover:text-cyan">Contact</NavLink>
                     </div>
